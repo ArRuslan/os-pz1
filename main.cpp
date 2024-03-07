@@ -26,7 +26,7 @@ void task_1() {
     double d;
     printf("1. Enter double number: ");
     std::cin >> d;
-    printf("1. Your double with two decimal places: %.2f\n", d);
+    printf("1. Double with two decimal places: %.2f\n", d);
 }
 
 void task_2() {
@@ -40,7 +40,7 @@ void task_2() {
     else
         x = exp(z) - exp(-z);
     const double y = pow(x, 2) + 8 * x + 6;
-    printf("2.1. Result: %.4f\n", y);
+    printf("2.1. Result: %.2f\n", y);
 }
 
 int read_int(const char* prompt) {
@@ -83,7 +83,7 @@ void task_3() {
 void task_4() {
     int len = 0;
     while(true) {
-        printf("3.1. Enter array length (greater than 1): ");
+        printf("3.1. Enter number count (greater than 1): ");
         std::cin >> len;
         check_cin_int();
         if(len >= 1)
@@ -125,6 +125,8 @@ void task_5() {
     const int a = read_int("   a: "); // 3
     const int b = read_int("   b: "); // 5
     const double c = read_double("   c: "); // 0.5
+    printf("   +---------------+\n");
+    printf("   +   X   |   Y   +\n");
     printf("   +---------------+\n");
     for(double x = a; x <= b; x += c) {
         const double y = x - sin(x);
